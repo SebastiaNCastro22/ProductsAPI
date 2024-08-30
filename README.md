@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Products API
 ## Descripción
 Este proyecto es una API REST que permite realizar operaciones CRUD sobre una base de datos de productos utilizando el Spring Security para la autenticación y autorización de usuarios.
@@ -36,3 +37,6 @@ Para poder ejecutar el proyecto es necesario tener instalado:
 3. El servidor responde con los datos solicitados.
 4. Se valida que el usuario tenga los permisos necesarios para acceder a los datos solicitados. (roles)
 5. El cliente muestra los datos.
+=======
+# ProductsAPI
+>>>>>>> e9490209a3394b40e7b9f3a493df9f83d8dd9ecc

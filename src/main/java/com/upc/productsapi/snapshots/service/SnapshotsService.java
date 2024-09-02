@@ -1,7 +1,7 @@
 package com.upc.productsapi.snapshots.service;
 
-import com.upc.productsapi.products.shared.dto.enums.EStatus;
-import com.upc.productsapi.products.shared.dto.response.ApiResponse;
+import com.upc.productsapi.shared.dto.enums.EStatus;
+import com.upc.productsapi.shared.dto.response.ApiResponse;
 import com.upc.productsapi.snapshots.model.dto.request.SnapShotsRequestDto;
 import com.upc.productsapi.snapshots.model.dto.response.SnapShotsResponseDto;
 import com.upc.productsapi.snapshots.model.entity.SnapShots;

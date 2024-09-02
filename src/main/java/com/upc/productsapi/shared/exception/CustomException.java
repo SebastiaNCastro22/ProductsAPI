@@ -1,4 +1,4 @@
-package com.upc.productsapi.products.shared.exception;
+package com.upc.productsapi.shared.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

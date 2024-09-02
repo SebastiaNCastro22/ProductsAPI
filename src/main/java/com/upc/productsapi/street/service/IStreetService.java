@@ -2,7 +2,7 @@ package com.upc.productsapi.street.service;
 
 import com.upc.productsapi.street.model.dto.request.StreetRequestDto;
 import com.upc.productsapi.street.model.dto.response.StreetResponseDto;
-import com.upc.productsapi.products.shared.dto.response.ApiResponse;
+import com.upc.productsapi.shared.dto.response.ApiResponse;
 
 import java.util.List;
 

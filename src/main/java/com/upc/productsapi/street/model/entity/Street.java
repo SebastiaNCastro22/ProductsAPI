@@ -16,7 +16,7 @@ public class Street {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long StreetId;
+    private Long streetId;
 
     @Column(nullable = false)
     private String name;

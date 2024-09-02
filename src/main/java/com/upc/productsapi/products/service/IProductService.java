@@ -2,7 +2,7 @@ package com.upc.productsapi.products.service;
 
 import com.upc.productsapi.products.model.dto.request.ProductRequestDto;
 import com.upc.productsapi.products.model.dto.response.ProductResponseDto;
-import com.upc.productsapi.products.shared.dto.response.ApiResponse;
+import com.upc.productsapi.shared.dto.response.ApiResponse;
 
 import java.util.List;
 

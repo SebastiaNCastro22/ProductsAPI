@@ -6,7 +6,7 @@ import com.upc.productsapi.security.model.dto.response.RegisteredUserResponseDto
 import com.upc.productsapi.security.model.dto.response.TokenResponseDto;
 import com.upc.productsapi.security.service.AuthService;
 import com.upc.productsapi.security.service.IAuthService;
-import com.upc.productsapi.products.shared.dto.response.ApiResponse;
+import com.upc.productsapi.shared.dto.response.ApiResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirements;
 import io.swagger.v3.oas.annotations.tags.Tag;

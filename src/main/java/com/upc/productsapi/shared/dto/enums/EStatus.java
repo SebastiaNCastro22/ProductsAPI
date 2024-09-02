@@ -1,4 +1,4 @@
-package com.upc.productsapi.products.shared.dto.enums;
+package com.upc.productsapi.shared.dto.enums;
 
 /**
  * Enum para el estado de la respuesta

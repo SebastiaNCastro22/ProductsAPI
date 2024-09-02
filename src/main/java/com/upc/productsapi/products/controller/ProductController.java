@@ -3,7 +3,7 @@ package com.upc.productsapi.products.controller;
 import com.upc.productsapi.products.model.dto.request.ProductRequestDto;
 import com.upc.productsapi.products.model.dto.response.ProductResponseDto;
 import com.upc.productsapi.products.service.IProductService;
-import com.upc.productsapi.products.shared.dto.response.ApiResponse;
+import com.upc.productsapi.shared.dto.response.ApiResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;

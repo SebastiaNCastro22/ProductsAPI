@@ -1,4 +1,4 @@
-package com.upc.productsapi.products.shared.exception;
+package com.upc.productsapi.shared.exception;
 
 /**
  * Clase que representa una excepción de recurso no encontrado (404)

@@ -4,7 +4,7 @@ import com.upc.productsapi.security.model.dto.request.LoginRequestDto;
 import com.upc.productsapi.security.model.dto.request.RegisterRequestDto;
 import com.upc.productsapi.security.model.dto.response.RegisteredUserResponseDto;
 import com.upc.productsapi.security.model.dto.response.TokenResponseDto;
-import com.upc.productsapi.products.shared.dto.response.ApiResponse;
+import com.upc.productsapi.shared.dto.response.ApiResponse;
 
 /**
  * Servicio para autenticación y registro de usuarios

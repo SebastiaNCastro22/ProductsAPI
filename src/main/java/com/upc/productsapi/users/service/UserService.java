@@ -1,8 +1,8 @@
 package com.upc.productsapi.users.service;
 
-import com.upc.productsapi.products.shared.dto.enums.EStatus;
-import com.upc.productsapi.products.shared.dto.response.ApiResponse;
-import com.upc.productsapi.products.shared.exception.ResourceNotFoundException;
+import com.upc.productsapi.shared.dto.enums.EStatus;
+import com.upc.productsapi.shared.dto.response.ApiResponse;
+import com.upc.productsapi.shared.exception.ResourceNotFoundException;
 import com.upc.productsapi.users.model.dto.UserResponseDto;
 import com.upc.productsapi.users.repository.IUserRepository;
 import org.modelmapper.ModelMapper;

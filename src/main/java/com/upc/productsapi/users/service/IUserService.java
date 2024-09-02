@@ -1,6 +1,6 @@
 package com.upc.productsapi.users.service;
 
-import com.upc.productsapi.products.shared.dto.response.ApiResponse;
+import com.upc.productsapi.shared.dto.response.ApiResponse;
 import com.upc.productsapi.users.model.dto.UserResponseDto;
 
 /**

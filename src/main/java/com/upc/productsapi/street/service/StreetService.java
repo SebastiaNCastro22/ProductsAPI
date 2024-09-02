@@ -1,14 +1,14 @@
 package com.upc.productsapi.street.service;
 
 
-import com.upc.productsapi.products.model.dto.response.ProductResponseDto;
-import com.upc.productsapi.products.shared.exception.ResourceNotFoundException;
+
+import com.upc.productsapi.shared.exception.ResourceNotFoundException;
 import com.upc.productsapi.street.model.dto.response.StreetResponseDto;
 import com.upc.productsapi.street.model.dto.request.StreetRequestDto;
 import com.upc.productsapi.street.model.entity.Street;
 import com.upc.productsapi.street.repository.IStreetRepository;
-import com.upc.productsapi.products.shared.dto.enums.EStatus;
-import com.upc.productsapi.products.shared.dto.response.ApiResponse;
+import com.upc.productsapi.shared.dto.enums.EStatus;
+import com.upc.productsapi.shared.dto.response.ApiResponse;
 
 
 import org.modelmapper.ModelMapper;
@@ -39,7 +39,7 @@ public class StreetService implements IStreetService{
         var streetResponse = modelMapper.map(streetSaved, StreetResponseDto.class);
 
         //retornar la respuesta
-        return new ApiResponse<>("Producto registrado correctamente", EStatus.SUCCESS, streetResponse);
+        return new ApiResponse<>("Calle registrada correctamente", EStatus.SUCCESS, streetResponse);
     }
 
     @Override
@@ -76,7 +76,7 @@ public class StreetService implements IStreetService{
 
         //entity a dto
         var streetsResponse = streets.stream()
-                .map(product -> modelMapper.map(streets, StreetResponseDto.class))
+                .map(street -> modelMapper.map(street, StreetResponseDto.class))
                 .toList();
 
         //retornar la respuesta

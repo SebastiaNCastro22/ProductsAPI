@@ -1,4 +1,4 @@
-package com.upc.productsapi.products.shared.util;
+package com.upc.productsapi.shared.util;
 
 import com.upc.productsapi.users.model.entity.Role;
 import com.upc.productsapi.users.model.enums.ERole;

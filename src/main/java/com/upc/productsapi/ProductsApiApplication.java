@@ -1,6 +1,6 @@
 package com.upc.productsapi;
 
-import com.upc.productsapi.products.shared.util.Utilities;
+import com.upc.productsapi.shared.util.Utilities;
 import com.upc.productsapi.users.model.enums.ERole;
 import com.upc.productsapi.users.repository.IRoleRepository;
 import lombok.extern.slf4j.Slf4j;

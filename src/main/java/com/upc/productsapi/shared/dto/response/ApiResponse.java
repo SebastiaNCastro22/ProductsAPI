@@ -1,6 +1,6 @@
-package com.upc.productsapi.products.shared.dto.response;
+package com.upc.productsapi.shared.dto.response;
 
-import com.upc.productsapi.products.shared.dto.enums.EStatus;
+import com.upc.productsapi.shared.dto.enums.EStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

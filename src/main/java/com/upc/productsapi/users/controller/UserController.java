@@ -1,6 +1,6 @@
 package com.upc.productsapi.users.controller;
 
-import com.upc.productsapi.products.shared.dto.response.ApiResponse;
+import com.upc.productsapi.shared.dto.response.ApiResponse;
 import com.upc.productsapi.users.model.dto.UserResponseDto;
 import com.upc.productsapi.users.service.IUserService;
 import io.swagger.v3.oas.annotations.Operation;

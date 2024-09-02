@@ -12,10 +12,10 @@ import lombok.NoArgsConstructor;
 public class StreetResponseDto {
 
 
-    private Long productId;
+    private Long streetId;
     private String name;
     private String district;
     /*private String serialNumber;*/
-    private RiskLevel monitoringLevel;
+    private RiskLevel riskLevel;
 
 }

@@ -1,7 +1,7 @@
-package com.upc.productsapi.street.shared.exception;
+package com.upc.productsapi.shared.exception;
 
-import com.upc.productsapi.street.shared.dto.enums.EStatus;
-import com.upc.productsapi.street.shared.dto.response.ApiResponse;
+import com.upc.productsapi.shared.dto.response.ApiResponse;
+import com.upc.productsapi.shared.dto.enums.EStatus;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;

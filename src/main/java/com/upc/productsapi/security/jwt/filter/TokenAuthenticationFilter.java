@@ -2,7 +2,7 @@ package com.upc.productsapi.security.jwt.filter;
 
 import com.upc.productsapi.security.jwt.provider.JwtTokenProvider;
 import com.upc.productsapi.security.service.CustomUserDetailsService;
-import com.upc.productsapi.products.shared.util.Utilities;
+import com.upc.productsapi.shared.util.Utilities;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

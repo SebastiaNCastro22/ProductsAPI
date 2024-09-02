@@ -1,6 +1,6 @@
 package com.upc.productsapi.security.service;
 
-import com.upc.productsapi.products.shared.util.Utilities;
+import com.upc.productsapi.shared.util.Utilities;
 import com.upc.productsapi.users.repository.IUserRepository;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

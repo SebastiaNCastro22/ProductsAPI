@@ -27,8 +27,8 @@ public class StreetController {
     }
 
     /**
-     * Obtiene todos los productos
-     * @return Lista de productos
+     * Obtiene todos las Calles
+     * @return Lista de Calles
      */
     @Operation(summary = "Obtiene todas las calles")
     @GetMapping("/list")
@@ -45,12 +45,12 @@ public class StreetController {
     }
 
     /**
-     * Registra un nuevo producto
-     * @param street producto a registrar
-     * @return Producto registrado
+     * Registra una nueva Calle
+     * @param street Calle a registrar
+     * @return Calle registrada
      */
 
-    @Operation(summary = "Registra un nuevo producto (ADMIN)")
+    @Operation(summary = "Registra una nueva Calle")
     @PostMapping("/create")
     public ResponseEntity<ApiResponse<StreetResponseDto>> registerProduct(@RequestBody StreetRequestDto street) {
             var res = service.registerStreet(street);
@@ -58,12 +58,12 @@ public class StreetController {
     }
 
     /**
-     * Elimina un producto por su ID
-     * @param streetId ID del producto
+     * Elimina una Calle por su ID
+     * @param streetId ID de la Calle
      * @return Respuesta
      */
     @PreAuthorize("hasRole('ROLE_ADMIN')") //solo los administradores pueden acceder a este endpoint
-    @Operation(summary = "Elimina un producto por su ID (ADMIN)")
+    @Operation(summary = "Elimina una Calle por su ID (ADMIN)")
     @DeleteMapping("/delete/{streetId}")
     public ResponseEntity<ApiResponse<Object>> deleteStreet(@PathVariable("streetId") Long streetId) {
         var res = service.deleteStreetById(streetId);

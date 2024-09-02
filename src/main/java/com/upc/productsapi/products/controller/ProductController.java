@@ -22,7 +22,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/products")
 public class ProductController {
-    private final IProductService service;
+   /* private final IProductService service;
 
     public ProductController(IProductService service) {
         this.service = service;
@@ -32,15 +32,15 @@ public class ProductController {
      * Obtiene todos los productos
      * @return Lista de productos
      */
-    @Operation(summary = "Obtiene todos los productos")
+    /*@Operation(summary = "Obtiene todos los productos")
     @GetMapping("/list")
     public ResponseEntity<ApiResponse<List<ProductResponseDto>>> listProducts() {
         var res = service.getAllProducts();
         return new ResponseEntity<>(res, HttpStatus.OK);
-    }
+    }*/
 
 
-    @Operation(summary = "Obtiene un producto por su id")
+    /*@Operation(summary = "Obtiene un producto por su id")
     @GetMapping("/{productId}")
     public ResponseEntity<ApiResponse<ProductResponseDto>> getProductByName(@PathVariable long productId){
         var res = service.getProductByProductId(productId);
@@ -53,7 +53,7 @@ public class ProductController {
      * @return Producto registrado
      */
 
-    @Operation(summary = "Registra un nuevo producto (ADMIN)")
+   /* @Operation(summary = "Registra un nuevo producto (ADMIN)")
     @PostMapping("/create")
     public ResponseEntity<ApiResponse<ProductResponseDto>> registerProduct(@RequestBody @Valid ProductRequestDto product) {
         var res = service.registerProduct(product);
@@ -65,11 +65,11 @@ public class ProductController {
      * @param productId ID del producto
      * @return Respuesta
      */
-    @PreAuthorize("hasRole('ROLE_ADMIN')") //solo los administradores pueden acceder a este endpoint
+   /* @PreAuthorize("hasRole('ROLE_ADMIN')") //solo los administradores pueden acceder a este endpoint
     @Operation(summary = "Elimina un producto por su ID (ADMIN)")
     @DeleteMapping("/delete/{productId}")
     public ResponseEntity<ApiResponse<Object>> deleteProduct(@PathVariable("productId") Long productId) {
         var res = service.deleteProductById(productId);
         return new ResponseEntity<>(res, HttpStatus.OK);
-    }
+    }*/
 }

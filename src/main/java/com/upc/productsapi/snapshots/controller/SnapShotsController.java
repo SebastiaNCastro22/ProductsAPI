@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/v1/products/{productId}/snapshots")
 public class SnapShotsController {
 
-    private final SnapshotsService snapshotService;
+    /*private final SnapshotsService snapshotService;
 
     @Autowired
     public SnapShotsController(SnapshotsService snapshotService) {
@@ -29,6 +29,6 @@ public class SnapShotsController {
 
         ApiResponse<SnapShotsResponseDto> response = snapshotService.registerSnapshot(productId, snapshotRequestDto);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
-    }
+    }*/
 
 }

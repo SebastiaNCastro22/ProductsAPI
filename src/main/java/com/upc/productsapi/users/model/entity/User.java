@@ -28,6 +28,9 @@ public class User {
     @Column(nullable = false)
     private String fullName;
 
+    @Column(nullable = false)
+    private String district;
+
     @Column(nullable = false, unique = true)
     private String username;
 
@@ -36,6 +39,7 @@ public class User {
 
     @Column(nullable = false)
     private String password;
+
 
     /**
      * -Info: MUCHOS "usuarios" pueden tener MUCHOS "roles"
@@ -48,4 +52,9 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "role_id")
     )
     private Set<Role> roles = new HashSet<>();
+
+    public Long getId() {
+        return userId;
+    }
+
 }

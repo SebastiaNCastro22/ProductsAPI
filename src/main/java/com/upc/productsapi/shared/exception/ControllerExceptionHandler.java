@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  * Clase que se encarga de manejar las excepciones que se producen en los controladores
- * @author Jamutaq Ortega
+ * @author Sebastian Castro
  */
 @RestControllerAdvice
 public class ControllerExceptionHandler {

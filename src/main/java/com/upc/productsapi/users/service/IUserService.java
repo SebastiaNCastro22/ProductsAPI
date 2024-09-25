@@ -2,6 +2,7 @@ package com.upc.productsapi.users.service;
 
 import com.upc.productsapi.shared.dto.response.ApiResponse;
 import com.upc.productsapi.users.model.dto.UserResponseDto;
+import com.upc.productsapi.users.model.entity.User;
 
 /**
  * Servicio para operaciones con usuarios
@@ -21,4 +22,6 @@ public interface IUserService {
      * @return Respuesta de la operación
      */
     ApiResponse<Object> deleteById(Long userId);
+
+    User findByUsername(String username);
 }

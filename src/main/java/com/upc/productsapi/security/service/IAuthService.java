@@ -8,7 +8,6 @@ import com.upc.productsapi.shared.dto.response.ApiResponse;
 
 /**
  * Servicio para autenticación y registro de usuarios
- * @author Jamutaq Ortega
  */
 public interface IAuthService {
     /**

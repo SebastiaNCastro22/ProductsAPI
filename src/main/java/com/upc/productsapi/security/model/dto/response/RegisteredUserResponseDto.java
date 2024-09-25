@@ -20,5 +20,6 @@ public class RegisteredUserResponseDto {
     private String fullName;
     private String username;
     private String email;
+    private String district;
     private Set<Role> roles = new HashSet<>();
 }

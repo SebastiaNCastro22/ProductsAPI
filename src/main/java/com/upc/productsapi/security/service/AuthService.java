@@ -25,7 +25,6 @@ import java.util.Collections;
 
 /**
  * Servicio para autenticación y registro de usuarios
- * @author Jamutaq Ortega
  */
 @Service
 public class AuthService implements IAuthService {
@@ -62,6 +61,7 @@ public class AuthService implements IAuthService {
                 .fullName(request.getFullName())
                 .username(request.getUsername())
                 .email(request.getEmail())
+                .district(request.getDistrict())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .build();
 

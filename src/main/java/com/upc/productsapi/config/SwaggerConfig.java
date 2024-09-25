@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * Clase que se encarga de configurar Swagger para la documentación de la API
- * @author Jamutaq Ortega
- */
+ * @author Sebastian Castro
+     */
 @Configuration
 public class SwaggerConfig {
     @Bean

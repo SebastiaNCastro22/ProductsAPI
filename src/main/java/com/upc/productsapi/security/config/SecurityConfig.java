@@ -57,17 +57,16 @@ public class SecurityConfig {
         authenticationManager = builder.build();
         http.authenticationManager(authenticationManager);
 
-        //desactiva el csrf porque spring boot ya tiene su propia configuración de csrf
-        http.csrf(AbstractHttpConfigurer::disable);
-        http.cors(Customizer.withDefaults());
+        // Configuración de seguridad general
+        http
+                .csrf(AbstractHttpConfigurer::disable)
+                .cors(Customizer.withDefaults()) // Asegúrate de que el CORS está habilitado
 
-        //se indica la clase que maneja excepciones
-        http.exceptionHandling(exception -> exception.authenticationEntryPoint((request, response, authException) -> {
-            //envía el error 401 (unauthorized)
-            log.error("[!] UNAUTHORIZED ERROR -> {}", authException.getMessage());
-            response.sendError(401, authException.getMessage());
-        }));
-
+                // Configura la entrada de autenticación no autorizada
+                .exceptionHandling(exception -> exception.authenticationEntryPoint((request, response, authException) -> {
+                    log.error("[!] UNAUTHORIZED ERROR -> {}", authException.getMessage());
+                    response.sendError(401, authException.getMessage());
+                }));
         //manejo de sesión sin estado (porque se usa JWT)
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 

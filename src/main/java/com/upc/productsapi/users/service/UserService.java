@@ -4,13 +4,14 @@ import com.upc.productsapi.shared.dto.enums.EStatus;
 import com.upc.productsapi.shared.dto.response.ApiResponse;
 import com.upc.productsapi.shared.exception.ResourceNotFoundException;
 import com.upc.productsapi.users.model.dto.UserResponseDto;
+import com.upc.productsapi.users.model.entity.User;
 import com.upc.productsapi.users.repository.IUserRepository;
 import org.modelmapper.ModelMapper;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 /**
  * Servicio para usuarios
- * @author Jamutaq Ortega
  */
 @Service
 public class UserService implements IUserService {
@@ -42,5 +43,11 @@ public class UserService implements IUserService {
         userRepository.delete(user);
 
         return new ApiResponse<>("Usuario eliminado correctamente", EStatus.SUCCESS, null);
+    }
+    @Override
+    public User findByUsername(String username) {
+        // Implementación para buscar el usuario por su nombre de usuario
+        return userRepository.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
     }
 }

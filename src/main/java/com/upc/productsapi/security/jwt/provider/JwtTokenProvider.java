@@ -8,7 +8,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Component;
-
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.JwtException;
+import io.jsonwebtoken.JwtParser;
 import java.util.Date;
 
 /**
@@ -19,6 +22,9 @@ import java.util.Date;
 @Component
 public class JwtTokenProvider {
     //obtiene una propiedad del application.properties
+
+
+
     @Value("${app.jwt-secret}")
     private String secret;
 
@@ -31,6 +37,7 @@ public class JwtTokenProvider {
      * @return Token generado
      */
     public String generateToken(Authentication authentication) {
+
         var authenticatedUser = (User) authentication.getPrincipal();
 
         //in minutes
@@ -52,12 +59,14 @@ public class JwtTokenProvider {
      * @return ID del usuario
      */
     public String getUsernameFromToken(String token) {
-        Claims claims = Jwts.parser()
-                .verifyWith(Utilities.getKey(secret)) //verifica la firma
-                .build() //construye el parser
-                .parseSignedClaims(token) //parsea el token
-                .getPayload(); //obtiene los claims (payload)
+        // Parsear el token utilizando la clave secreta
+        Claims claims = (Claims) Jwts.parser()
+                .verifyWith(Utilities.getKey(secret)) // Verificar la firma del token
+                .build() // Construir el parser JWT
+                .parseSignedClaims(token) // Parsear el token firmado
+                .getPayload(); // Obtener el payload (claims) del token
 
+        // Obtener el 'subject' del token, que típicamente es el nombre de usuario o ID
         return claims.getSubject();
     }
 
@@ -88,4 +97,7 @@ public class JwtTokenProvider {
 
         return false;
     }
+
+
+
 }

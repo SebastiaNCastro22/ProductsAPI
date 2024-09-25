@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * Clase que se encarga de configurar ModelMapper para el mapeo de objetos
- * @author Jamutaq Ortega
  */
 @Configuration
 public class ModelMapperConfig {

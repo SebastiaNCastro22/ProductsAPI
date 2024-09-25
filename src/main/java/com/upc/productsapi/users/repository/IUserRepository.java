@@ -3,6 +3,7 @@ package com.upc.productsapi.users.repository;
 import com.upc.productsapi.users.model.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -17,6 +18,8 @@ public interface IUserRepository extends JpaRepository<User, Long> {
      * @return Usuario encontrado
      */
     Optional<User> findByEmailOrUsername(String email, String username);
+
+    Optional<User> findByUsername(String username);
 
     /**
      * Verifica si existe un usuario por su email

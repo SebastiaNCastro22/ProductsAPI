@@ -18,6 +18,7 @@ import java.util.Set;
 public class UserResponseDto {
     private Long userId;
     private String fullName;
+    private String district;
     private String username;
     private String email;
     private Set<Role> roles = new HashSet<>();

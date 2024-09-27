@@ -82,6 +82,7 @@ public class ReportService implements IReportService {
 
         return new ApiResponse<>("Ok", EStatus.SUCCESS, reportResponse);
     }
+
     @Override
     public ApiResponse<List<ReportResponseDto>> getReportByDistrict(String district) {
         List<Report> reports = reportRepository.findByDistrict(district);

@@ -20,7 +20,6 @@ public class Report {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "report_id")
     private Long reportId;
 
     @Column(nullable = false)
@@ -44,8 +43,10 @@ public class Report {
     @Column(nullable = false)
     private LocalTime reportTime = LocalTime.now(); // Inicializa con la hora actual
 
-    @ElementCollection
-    private List<String> imagesBase64;
+    @Column(nullable = false)
+    private String imagesBase64;
+
+
 
     @Enumerated(EnumType.STRING)
     public Type getTypeEnum() {
@@ -76,13 +77,6 @@ public class Report {
 
     }
 
-    public void setComplaintDate(LocalDate reportDate) {
-        this.reportDate = reportDate != null ? reportDate : LocalDate.now();
-    }
-
-    public void setComplaintTime(LocalTime reportTime) {
-        this.reportTime = reportTime != null ? reportTime : LocalTime.now();
-    }
 
     public Long getId() {
         return this.reportId;

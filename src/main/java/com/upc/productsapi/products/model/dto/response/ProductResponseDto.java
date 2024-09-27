@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProductResponseDto {
+
     private Long productId;
     private String brand;
     private String model;
